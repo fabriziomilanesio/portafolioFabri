@@ -61,7 +61,6 @@ function renderCerts({ animate = true } = {}) {
         const linkAttrs = href
           ? ` href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}"`
           : '';
-        const certificateLabel = ui().skills.viewCertificate || (getContent().code === 'es' ? 'Ver certificado PDF' : 'View PDF certificate');
 
         return `
         <${tag} class="cert ${cert.featured ? 'cert--featured' : ''} ${href ? 'cert--link' : ''}"${linkAttrs}>
@@ -69,7 +68,7 @@ function renderCerts({ animate = true } = {}) {
           <div>
             <h3 class="cert__name">${escapeHtml(cert.name)}</h3>
             <p class="cert__issuer">${escapeHtml(cert.issuer)}${cert.year ? ` · ${escapeHtml(cert.year)}` : ''}</p>
-            ${href ? `<span class="cert__link">${escapeHtml(certificateLabel)} <span aria-hidden="true">↗</span></span>` : ''}
+            ${href ? '<span class="cert__link" aria-hidden="true">↗</span>' : ''}
           </div>
         </${tag}>`;
       },
