@@ -63,6 +63,7 @@ function renderProfile() {
   $('#linkedinBtn').href = profile.linkedin;
   $('#cvDownloadEs').href = profile.cvEs;
   $('#cvDownloadEn').href = profile.cvEn;
+  $('#cvDownloadEs').hidden = getContent().code === 'en';
   $('#footerYear').textContent = `© ${new Date().getFullYear()} Fabrizio Milanesio`;
 
   $('#statusPillText').textContent = profile.available
