@@ -61,7 +61,8 @@ function renderProfile() {
   $('#interests').innerHTML = profile.interests.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
 
   $('#linkedinBtn').href = profile.linkedin;
-  $('#cvDownload').href = profile.cv;
+  $('#cvDownloadEs').href = profile.cvEs;
+  $('#cvDownloadEn').href = profile.cvEn;
   $('#footerYear').textContent = `© ${new Date().getFullYear()} Fabrizio Milanesio`;
 
   $('#statusPillText').textContent = profile.available

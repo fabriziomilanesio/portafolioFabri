@@ -1,7 +1,7 @@
 /**
  * contact.js — Datos de contacto, acciones de copiado y formulario.
- * El formulario valida en cliente y arma un mailto con el mensaje redactado,
- * de modo que el sitio funcione sin backend (hosting estático).
+ * El formulario valida en cliente y envía el mensaje mediante FormSubmit,
+ * compatible con hosting estático como GitHub Pages.
  */
 
 import { getContent, ui, fmt, onLangChange } from '../data.js';
@@ -130,7 +130,7 @@ function initForm() {
 
   const note = $('#formNote');
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     const t = ui().contact;
@@ -142,20 +142,42 @@ function initForm() {
       return;
     }
 
-    const body = [
-      `${t.name}: ${values.name}`,
-      `${t.email}: ${values.email}`,
-      '',
-      values.message,
-      '',
-      t.mailSignature,
-    ].join('\n');
-
     const to = getContent().profile.email;
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(values.subject)}&body=${encodeURIComponent(body)}`;
+    const submitButton = form.querySelector('[type="submit"]');
 
-    note.textContent = t.formNote;
-    toast(t.formOk, 'success');
+    try {
+      submitButton.disabled = true;
+
+      const response = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(to)}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          subject: values.subject,
+          message: values.message,
+          _subject: `[Portafolio] ${values.subject}`,
+          _replyto: values.email,
+          _template: 'table',
+          _url: window.location.href,
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok || data.success === false) throw new Error('Form submission failed');
+
+      form.reset();
+      note.textContent = t.formNote;
+      toast(t.formOk, 'success');
+    } catch {
+      note.textContent = t.formSubmitError;
+      toast(t.formSubmitError, 'error');
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 
   // Limpia el error del campo apenas el usuario corrige.

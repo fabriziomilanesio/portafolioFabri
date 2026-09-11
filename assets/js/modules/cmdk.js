@@ -45,7 +45,7 @@ function buildCommands() {
         toast(ok ? t.emailCopied : ui().common.copyError, ok ? 'success' : 'error');
       },
     },
-    { label: t.downloadCv, hint: t.cvHint, icon: '↓', run: () => $('#cvDownload')?.click() },
+    { label: t.downloadCv, hint: t.cvHint, icon: '↓', run: () => $('#cvDownloadEs')?.click() },
     { label: t.openLinkedin, hint: t.linkedinHint, icon: '↗', run: () => window.open(profile.linkedin, '_blank', 'noopener') },
     { label: t.whatsapp, hint: profile.phone, icon: '↗', run: () => $('#whatsappBtn')?.click() },
     { label: t.apiDemo, hint: t.playgroundHint, icon: '⚡', run: () => goToPlayground('api') },
