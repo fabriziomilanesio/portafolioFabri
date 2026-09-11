@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabrizio Milanesio — QA Functional Analyst &amp; Systems Analyst</title>
+  <meta name="description" content="Portafolio interactivo de Fabrizio Milanesio, QA Functional Analyst & Systems Analyst especializado en Fintech y Banking: validación de APIs REST, microservicios, SQL, AWS CloudWatch y Splunk." />
+  <meta name="author" content="Fabrizio Milanesio" />
+  <meta name="theme-color" content="#070b10" />
+  <link rel="canonical" href="https://fabriziomilanesio.dev/" />
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fabrizio Milanesio — QA Functional Analyst & Systems Analyst" />
+  <meta property="og:description" content="Portafolio interactivo con simuladores de testing de APIs, bug tracking y validación de bases de datos en entornos Fintech y Banking." />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fabrizio Milanesio",
+    "jobTitle": "QA Functional Analyst & Systems Analyst",
+    "email": "mailto:fabrimila1998@gmail.com",
+    "telephone": "+54 9 351-2007897",
+    "address": { "@type": "PostalAddress", "addressLocality": "Córdoba", "addressCountry": "AR" },
+    "knowsAbout": ["QA Testing", "API REST Testing", "Postman", "SQL", "Microservicios", "AWS CloudWatch", "Splunk", "ISTQB"],
+    "knowsLanguage": ["es", "en"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Tecnológica Nacional" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido principal</a>
+
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--cyan" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--violet" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════  HEADER  ══════════════════════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio" data-i18n-aria="nav.brandAria" aria-label="Inicio — Fabrizio Milanesio">
+        <span class="brand__mark" aria-hidden="true">FM</span>
+        <span class="brand__text">
+          <strong>Fabrizio Milanesio</strong>
+          <small data-i18n="nav.brandRole">QA Functional Analyst</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="siteNav" data-i18n-aria="nav.navAria" aria-label="Navegación principal">
+        <ul class="site-nav__list" id="navList"><!-- render: main.js --></ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="btn btn--ghost btn--sm cmdk-trigger" id="cmdkTrigger" type="button" aria-haspopup="dialog">
+          <span aria-hidden="true">⌘</span> <span data-i18n="nav.search">Buscar</span> <kbd>K</kbd>
+        </button>
+
+        <!-- Selector de idioma -->
+        <button class="lang-toggle" id="langToggle" type="button" aria-live="polite">
+          <span class="lang-toggle__flag" id="langFlag" aria-hidden="true"></span>
+          <span class="lang-toggle__code" id="langCode">ES</span>
+          <span class="lang-toggle__swap" aria-hidden="true">⇄</span>
+        </button>
+
+        <a class="btn btn--primary btn--sm" href="#contacto" data-i18n="nav.contact">Contactar</a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" data-i18n-aria="nav.menuOpen" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="site-header__progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- ══════════════════════════  HERO  ══════════════════════════ -->
+    <section class="section hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="status-pill" id="statusPill">
+            <span class="status-pill__dot" aria-hidden="true"></span>
+            <span id="statusPillText">System status: 100% tests passing</span>
+          </p>
+
+          <h1 class="hero__title">
+            <span data-i18n="hero.titleLead">QA Analyst con mentalidad de</span>
+            <span class="grad-text" data-i18n="hero.titleAccent">Systems Analyst</span>
+          </h1>
+
+          <p class="hero__subtitle" id="heroSubtitle"><!-- render: main.js --></p>
+
+          <ul class="hero__chips" id="heroChips"><!-- render: main.js --></ul>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" id="cvDownload" href="assets/cv/CV-Fabrizio-Milanesio-ES.pdf" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              <span data-i18n="hero.cv">Descargar CV</span>
+            </a>
+            <a class="btn btn--outline" id="linkedinBtn" href="#" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon icon--fill"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3.2 8.5h3.5V21H3.2V8.5Zm6 0h3.35v1.7h.05a3.67 3.67 0 0 1 3.3-1.82c3.53 0 4.18 2.33 4.18 5.35V21h-3.5v-5.6c0-1.34-.02-3.06-1.86-3.06-1.87 0-2.15 1.46-2.15 2.96V21H9.2V8.5Z"/></svg>
+              <span data-i18n="hero.linkedin">LinkedIn</span>
+            </a>
+            <button class="btn btn--ghost" data-copy="email" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span data-i18n="hero.copyEmail">Copiar email</span>
+            </button>
+          </div>
+
+          <dl class="hero__metrics" id="heroMetrics"><!-- render: main.js --></dl>
+        </div>
+
+        <!-- Terminal interactiva -->
+        <div class="hero__terminal">
+          <div class="terminal" id="heroTerminal" role="img" data-i18n-aria="hero.terminalAria" aria-label="Terminal simulada que ejecuta la suite de pruebas del portafolio">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--yellow"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+              <span class="terminal__title" data-i18n="hero.terminalTitle">fabrizio@qa-lab: ~/portfolio</span>
+            </div>
+            <pre class="terminal__body" id="terminalBody"><code></code></pre>
+            <div class="terminal__footer">
+              <span class="terminal__badge terminal__badge--ok" id="terminalBadge">esperando ejecución…</span>
+              <button class="terminal__replay" id="terminalReplay" type="button" data-i18n="hero.replay">↻ Volver a ejecutar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════  SOBRE MÍ  ══════════════════════ -->
+    <section class="section section--tight" id="sobre-mi" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="about__intro">
+          <p class="section-kicker" data-i18n="about.kicker">01 — Perfil</p>
+          <h2 class="section-title" id="about-title" data-i18n="about.title">Testeo software donde un error cuesta dinero</h2>
+          <div class="about__text" id="aboutText"><!-- render: main.js --></div>
+        </div>
+        <aside class="about__aside">
+          <div class="card card--soft">
+            <h3 class="card__title" data-i18n="about.howTitle">Cómo trabajo</h3>
+            <ul class="check-list" id="howList"><!-- render: main.js --></ul>
+          </div>
+          <div class="card card--soft">
+            <h3 class="card__title" data-i18n="about.langTitle">Idiomas</h3>
+            <ul class="lang-list" id="langList"><!-- render: main.js --></ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ══════════════════  QA PLAYGROUND  ══════════════════ -->
+    <section class="section" id="playground" aria-labelledby="playground-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker" data-i18n="playground.kicker">02 — Demo interactiva</p>
+          <h2 class="section-title" id="playground-title" data-i18n="playground.title">Interactive QA Playground</h2>
+          <p class="section-lead" data-i18n="playground.lead">
+            En vez de contarte cómo trabajo, te lo muestro. Tres módulos simulados con datos que reproducen
+            el día a día de un proyecto de migración bancaria: ejecutá los requests, abrí los tickets y corré las queries.
+          </p>
+        </header>
+
+        <div class="tabs" data-tabs="playground">
+          <div class="tabs__list" role="tablist" data-i18n-aria="playground.tabsAria" aria-label="Módulos del QA Playground">
+            <button class="tabs__tab is-active" role="tab" id="tab-api" aria-controls="panel-api" aria-selected="true" data-tab="api">
+              <span class="tabs__icon" aria-hidden="true">⚡</span> <span data-i18n="playground.tabs.api.label">API Testing</span>
+              <small data-i18n="playground.tabs.api.sub">Simulador Postman</small>
+            </button>
+            <button class="tabs__tab" role="tab" id="tab-bugs" aria-controls="panel-bugs" aria-selected="false" tabindex="-1" data-tab="bugs">
+              <span class="tabs__icon" aria-hidden="true">🐞</span> <span data-i18n="playground.tabs.bugs.label">Bug Tracker</span>
+              <small data-i18n="playground.tabs.bugs.sub">Mini-board Jira</small>
+            </button>
+            <button class="tabs__tab" role="tab" id="tab-sql" aria-controls="panel-sql" aria-selected="false" tabindex="-1" data-tab="sql">
+              <span class="tabs__icon" aria-hidden="true">🗄️</span> <span data-i18n="playground.tabs.sql.label">Database</span>
+              <small data-i18n="playground.tabs.sql.sub">Validación SQL</small>
+            </button>
+          </div>
+
+          <!-- Panel: API -->
+          <div class="tabs__panel is-active" role="tabpanel" id="panel-api" aria-labelledby="tab-api" data-panel="api">
+            <div class="api-console" id="apiConsole"><!-- render: api-console.js --></div>
+          </div>
+
+          <!-- Panel: Bugs -->
+          <div class="tabs__panel" role="tabpanel" id="panel-bugs" aria-labelledby="tab-bugs" data-panel="bugs" hidden>
+            <div class="bug-board" id="bugBoard"><!-- render: bug-board.js --></div>
+          </div>
+
+          <!-- Panel: SQL -->
+          <div class="tabs__panel" role="tabpanel" id="panel-sql" aria-labelledby="tab-sql" data-panel="sql" hidden>
+            <div class="sql-lab" id="sqlLab"><!-- render: sql-lab.js --></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════  EXPERIENCIA  ══════════════════ -->
+    <section class="section" id="experiencia" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker" data-i18n="timeline.kicker">03 — Trayectoria</p>
+          <h2 class="section-title" id="exp-title" data-i18n="timeline.title">Experiencia &amp; casos de estudio</h2>
+          <p class="section-lead" data-i18n="timeline.lead">
+            Cada posición desplegada como un caso: qué se probó, con qué herramientas y cuál fue el impacto real
+            del aseguramiento de calidad.
+          </p>
+        </header>
+        <div class="timeline" id="timeline"><!-- render: timeline.js --></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════  SKILLS  ══════════════════ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker" data-i18n="skills.kicker">04 — Stack</p>
+          <h2 class="section-title" id="skills-title" data-i18n="skills.title">Matriz de habilidades &amp; certificaciones</h2>
+          <p class="section-lead" data-i18n="skills.lead">Filtrá por área para ver el detalle de cada herramienta y cómo la aplico.</p>
+        </header>
+
+        <div class="skills" id="skillsModule"><!-- render: skills.js --></div>
+
+        <div class="certs" id="certs"><!-- render: skills.js --></div>
+
+        <div class="soft-grid">
+          <div class="card card--soft">
+            <h3 class="card__title" data-i18n="skills.soft">Habilidades blandas</h3>
+            <ul class="tag-list" id="softSkills"><!-- render: main.js --></ul>
+          </div>
+          <div class="card card--soft">
+            <h3 class="card__title" data-i18n="skills.interests">Intereses</h3>
+            <ul class="tag-list" id="interests"><!-- render: main.js --></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════  CONTACTO  ══════════════════ -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__intro">
+          <p class="section-kicker" data-i18n="contact.kicker">05 — Contacto</p>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">¿Hablamos de tu próximo release?</h2>
+          <p class="section-lead" data-i18n="contact.lead">
+            Estoy abierto a posiciones de QA Functional / QA Analyst en Fintech, Banking y producto digital.
+            Respondo en el día.
+          </p>
+
+          <ul class="contact__list" id="contactList"><!-- render: contact.js --></ul>
+
+          <div class="contact__quick">
+            <button class="btn btn--outline btn--sm" data-copy="email" type="button" data-i18n="contact.copyEmail">Copiar email</button>
+            <button class="btn btn--outline btn--sm" data-copy="phone" type="button" data-i18n="contact.copyPhone">Copiar teléfono</button>
+            <a class="btn btn--outline btn--sm" id="whatsappBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="contact.whatsapp">WhatsApp</a>
+          </div>
+        </div>
+
+        <form class="contact__form card" id="contactForm" novalidate>
+          <h3 class="card__title" data-i18n="contact.formTitle">Enviar un mensaje</h3>
+          <p class="form-hint" data-i18n="contact.formHint">Se abre tu cliente de correo con el mensaje ya redactado.</p>
+
+          <div class="field">
+            <label for="fName"><span data-i18n="contact.name">Nombre</span> <span aria-hidden="true">*</span></label>
+            <input type="text" id="fName" name="name" required autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu nombre" aria-describedby="fNameError" />
+            <p class="field__error" id="fNameError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="fEmail"><span data-i18n="contact.email">Email</span> <span aria-hidden="true">*</span></label>
+            <input type="email" id="fEmail" name="email" required autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nombre@empresa.com" aria-describedby="fEmailError" />
+            <p class="field__error" id="fEmailError" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label for="fSubject" data-i18n="contact.subject">Asunto</label>
+            <select id="fSubject" name="subject"><!-- render: contact.js --></select>
+          </div>
+
+          <div class="field">
+            <label for="fMessage"><span data-i18n="contact.message">Mensaje</span> <span aria-hidden="true">*</span></label>
+            <textarea id="fMessage" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Contame brevemente sobre el proyecto o la posición…" aria-describedby="fMessageError"></textarea>
+            <p class="field__error" id="fMessageError" role="alert"></p>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit" data-i18n="contact.submit">Enviar mensaje</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════  FOOTER  ══════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__name">Fabrizio Milanesio</p>
+        <p class="site-footer__role" data-i18n="footer.role">QA Functional Analyst &amp; Systems Analyst · Córdoba, Argentina</p>
+      </div>
+      <nav class="site-footer__nav" id="footerNav" data-i18n-aria="footer.navAria" aria-label="Navegación del pie"><!-- render: main.js --></nav>
+      <p class="site-footer__meta">
+        <span id="footerYear"></span> · <span data-i18n="footer.madeWith">Hecho con HTML, CSS y JavaScript vanilla.</span>
+        <span class="site-footer__status"><span data-i18n="footer.build">Build:</span> <code>passing</code></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Command palette -->
+  <div class="cmdk" id="cmdk" hidden>
+    <div class="cmdk__backdrop" data-cmdk-close></div>
+    <div class="cmdk__dialog" role="dialog" aria-modal="true" data-i18n-aria="cmdk.aria" aria-label="Búsqueda rápida">
+      <input type="text" class="cmdk__input" id="cmdkInput" data-i18n-placeholder="cmdk.placeholder" placeholder="Ir a una sección o acción…" autocomplete="off" data-i18n-aria="cmdk.searchAria" aria-label="Buscar" />
+      <ul class="cmdk__list" id="cmdkList" role="listbox"></ul>
+      <p class="cmdk__hint">
+        <kbd>↑</kbd><kbd>↓</kbd> <span data-i18n="cmdk.hintNav">navegar</span> ·
+        <kbd>Enter</kbd> <span data-i18n="cmdk.hintOpen">abrir</span> ·
+        <kbd>Esc</kbd> <span data-i18n="cmdk.hintClose">cerrar</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Toasts -->
+  <div class="toaster" id="toaster" role="status" aria-live="polite" aria-atomic="false"></div>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
