@@ -1294,6 +1294,8 @@ code, pre, kbd { font-family: var(--font-mono); }
 }
 .cert:hover { transform: translateY(-2px); border-color: var(--line-strong); }
 .cert--featured { border-color: rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.05); }
+.cert--link { color: inherit; text-decoration: none; cursor: pointer; }
+.cert--link:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
 .cert__icon { font-size: 1.4rem; line-height: 1; }
 .cert__name { font-weight: 600; font-size: 0.9rem; }
 .cert__issuer { font-size: 0.78rem; color: var(--text-dim); margin-top: 3px; }

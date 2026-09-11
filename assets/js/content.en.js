@@ -985,8 +985,8 @@ ORDER BY delta DESC;`,
   certifications: [
     { name: 'ISTQB Foundation Level', issuer: 'International certification — UTN', year: '', featured: true, icon: '🏅' },
     { name: 'Systems Analyst', issuer: 'Universidad Tecnológica Nacional (UTN)', year: '2026', featured: true, icon: '🎓' },
-    { name: 'Diploma in Gaming Testing', issuer: 'UTN', year: 'April 2025', featured: false, icon: '🎮' },
-    { name: 'Diploma in Functional Testing', issuer: 'UTN', year: 'March 2025', featured: false, icon: '🧪' },
+    { name: 'Diploma in Gaming Testing', issuer: 'UTN', year: 'April 2025', featured: false, icon: '🎮', href: 'assets/certificates/certificado-testing-gamer.pdf' },
+    { name: 'Diploma in Functional Testing', issuer: 'UTN', year: 'March 2025', featured: false, icon: '🧪', href: 'assets/certificates/certificado-testing-funcional.pdf' },
     { name: 'Advanced Blockchain Technologies', issuer: 'UTN', year: '', featured: false, icon: '⛓️' },
   ],
 

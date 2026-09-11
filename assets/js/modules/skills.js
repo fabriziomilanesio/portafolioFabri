@@ -48,14 +48,21 @@ function renderCerts({ animate = true } = {}) {
 
   host.innerHTML = getContent()
     .certifications.map(
-      (cert) => `
-        <article class="cert ${cert.featured ? 'cert--featured' : ''}">
+      (cert) => {
+        const tag = cert.href ? 'a' : 'article';
+        const linkAttrs = cert.href
+          ? ` href="${escapeHtml(cert.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}`
+          : '';
+
+        return `
+        <${tag} class="cert ${cert.featured ? 'cert--featured' : ''} ${cert.href ? 'cert--link' : ''}"${linkAttrs}>
           <span class="cert__icon" aria-hidden="true">${cert.icon}</span>
           <div>
             <h3 class="cert__name">${escapeHtml(cert.name)}</h3>
             <p class="cert__issuer">${escapeHtml(cert.issuer)}${cert.year ? ` · ${escapeHtml(cert.year)}` : ''}</p>
           </div>
-        </article>`,
+        </${tag}>`;
+      },
     )
     .join('');
 
