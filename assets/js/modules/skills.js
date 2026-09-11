@@ -51,7 +51,7 @@ function renderCerts({ animate = true } = {}) {
       (cert) => {
         const tag = cert.href ? 'a' : 'article';
         const linkAttrs = cert.href
-          ? ` href="${escapeHtml(cert.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}`
+          ? ` href="${escapeHtml(cert.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}"`
           : '';
 
         return `
@@ -60,6 +60,7 @@ function renderCerts({ animate = true } = {}) {
           <div>
             <h3 class="cert__name">${escapeHtml(cert.name)}</h3>
             <p class="cert__issuer">${escapeHtml(cert.issuer)}${cert.year ? ` · ${escapeHtml(cert.year)}` : ''}</p>
+            ${cert.href ? `<span class="cert__link">${escapeHtml(ui().skills.viewCertificate)} <span aria-hidden="true">↗</span></span>` : ''}
           </div>
         </${tag}>`;
       },
