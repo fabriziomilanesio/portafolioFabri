@@ -1283,7 +1283,7 @@ code, pre, kbd { font-family: var(--font-mono); }
 .skill__note { font-size: 0.8rem; color: var(--text-dim); margin-top: 7px; line-height: 1.5; }
 
 .certs { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
-.skills__lead { margin: 16px 0 28px; }
+.skills__lead { margin: 16px 0 40px; }
 .cert {
   display: flex;
   gap: 13px;

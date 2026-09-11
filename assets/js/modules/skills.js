@@ -14,6 +14,13 @@ const countFor = (categoryId) => {
   return categoryId === 'all' ? skills.length : skills.filter((skill) => skill.cat.includes(categoryId)).length;
 };
 
+function certificateHref(cert) {
+  if (cert.href) return cert.href;
+  if (/Gaming Testing/i.test(cert.name)) return 'assets/certificates/certificado-testing-gamer.pdf';
+  if (/Testing Funcional|Functional Testing/i.test(cert.name)) return 'assets/certificates/certificado-testing-funcional.pdf';
+  return '';
+}
+
 /** Nivel → clase de color, reconociendo la etiqueta en ambos idiomas. */
 const levelClass = (level) =>
   /avanzad|advanced/i.test(level) ? 'skill__level--avanzado' : 'skill__level--intermedio';
@@ -49,18 +56,20 @@ function renderCerts({ animate = true } = {}) {
   host.innerHTML = getContent()
     .certifications.map(
       (cert) => {
-        const tag = cert.href ? 'a' : 'article';
-        const linkAttrs = cert.href
-          ? ` href="${escapeHtml(cert.href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}"`
+        const href = certificateHref(cert);
+        const tag = href ? 'a' : 'article';
+        const linkAttrs = href
+          ? ` href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cert.name} (PDF)`)}"`
           : '';
+        const certificateLabel = ui().skills.viewCertificate || (getContent().code === 'es' ? 'Ver certificado PDF' : 'View PDF certificate');
 
         return `
-        <${tag} class="cert ${cert.featured ? 'cert--featured' : ''} ${cert.href ? 'cert--link' : ''}"${linkAttrs}>
+        <${tag} class="cert ${cert.featured ? 'cert--featured' : ''} ${href ? 'cert--link' : ''}"${linkAttrs}>
           <span class="cert__icon" aria-hidden="true">${cert.icon}</span>
           <div>
             <h3 class="cert__name">${escapeHtml(cert.name)}</h3>
             <p class="cert__issuer">${escapeHtml(cert.issuer)}${cert.year ? ` · ${escapeHtml(cert.year)}` : ''}</p>
-            ${cert.href ? `<span class="cert__link">${escapeHtml(ui().skills.viewCertificate)} <span aria-hidden="true">↗</span></span>` : ''}
+            ${href ? `<span class="cert__link">${escapeHtml(certificateLabel)} <span aria-hidden="true">↗</span></span>` : ''}
           </div>
         </${tag}>`;
       },

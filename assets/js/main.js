@@ -11,7 +11,7 @@ import { initApiConsole } from './modules/api-console.js';
 import { initBugBoard } from './modules/bug-board.js';
 import { initSqlLab } from './modules/sql-lab.js';
 import { initTimeline } from './modules/timeline.js';
-import { initSkills } from './modules/skills.js';
+import { initSkills } from './modules/skills.js?v=cert-links-3';
 import { initContact } from './modules/contact.js';
 import { initTerminal } from './modules/terminal.js';
 import { initCmdk } from './modules/cmdk.js';
