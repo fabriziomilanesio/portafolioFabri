@@ -12,6 +12,7 @@ let drawer = null;
 let lastFocused = null;
 /** Ticket abierto en el panel lateral, para poder redibujarlo al cambiar idioma. */
 let openKey = null;
+let activeSeverity = 'all';
 
 const board = () => getContent().bugBoard;
 const sevClass = (severity) => `sev--${severity.toLowerCase()}`;
@@ -37,10 +38,14 @@ function ticketCard(ticket) {
 function renderBoard() {
   const data = board();
   const t = ui().bugs;
+  const severities = ['Blocker', 'Critical', 'Major', 'Minor'];
+  const visibleTickets = activeSeverity === 'all'
+    ? data.tickets
+    : data.tickets.filter((ticket) => ticket.severity.toLowerCase() === activeSeverity);
 
   const columns = data.columns
     .map((column) => {
-      const tickets = data.tickets.filter((ticket) => ticket.column === column.id);
+      const tickets = visibleTickets.filter((ticket) => ticket.column === column.id);
       return `
         <div class="board__col">
           <div class="board__col-head">
@@ -58,11 +63,17 @@ function renderBoard() {
         <p class="bug-board__project">${escapeHtml(data.project)}</p>
         <p class="bug-board__sprint">${escapeHtml(data.sprint)}</p>
       </div>
-      <div class="bug-board__legend">
-        <span class="sev sev--blocker">Blocker</span>
-        <span class="sev sev--critical">Critical</span>
-        <span class="sev sev--major">Major</span>
-        <span class="sev sev--minor">Minor</span>
+      <div class="bug-board__filters">
+        <p class="bug-board__filter-hint">${escapeHtml(t.filterHint)}</p>
+        <div class="bug-board__legend" role="group" aria-label="${escapeHtml(t.filterAria)}">
+          <button class="sev bug-filter ${activeSeverity === 'all' ? 'is-active' : ''}" type="button" data-severity-filter="all" aria-pressed="${activeSeverity === 'all'}">${escapeHtml(t.all)}</button>
+          ${severities
+            .map((severity) => {
+              const key = severity.toLowerCase();
+              return `<button class="sev ${sevClass(severity)} bug-filter ${activeSeverity === key ? 'is-active' : ''}" type="button" data-severity-filter="${key}" aria-pressed="${activeSeverity === key}">${severity}</button>`;
+            })
+            .join('')}
+        </div>
       </div>
     </header>
     <div class="board">${columns}</div>
@@ -219,6 +230,13 @@ export function initBugBoard() {
   observeReveal(root);
 
   root.addEventListener('click', (event) => {
+    const filter = event.target.closest('[data-severity-filter]');
+    if (filter) {
+      activeSeverity = filter.dataset.severityFilter;
+      renderBoard();
+      return;
+    }
+
     const card = event.target.closest('[data-ticket]');
     if (card) openTicket(card.dataset.ticket);
   });
