@@ -5,7 +5,7 @@
  * emoji de bandera, así que 🇦🇷 se vería como dos letras sueltas.
  */
 
-import { getLang, toggleLang, setLang, onLangChange, ui } from '../data.js?v=language-fix-1';
+import { getLang, toggleLang, setLang, onLangChange, ui } from '../data.js?v=brand-role-1';
 import { $ } from '../ui.js';
 
 const FLAGS = {

@@ -992,7 +992,7 @@ ORDER BY delta DESC;`,
 
   ui: {
     nav: {
-      brandRole: 'QA Functional Analyst',
+      brandRole: 'QA Analyst | Functional & Integration Testing',
       brandAria: 'Home — Fabrizio Milanesio',
       search: 'Search',
       contact: 'Get in touch',
