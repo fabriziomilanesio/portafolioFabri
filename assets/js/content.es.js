@@ -13,7 +13,7 @@ export default {
   profile: {
     name: 'Fabrizio Milanesio',
     role: 'QA Functional Analyst & Systems Analyst',
-    tagline: 'QA Analyst con mentalidad de Systems Analyst',
+    tagline: 'Software Testing Engineer',
     subtitle:
       'Aseguro la calidad de plataformas Fintech y Banking: validación de APIs REST, microservicios, consistencia de datos en SQL y observabilidad en AWS CloudWatch y Splunk.',
     location: 'Córdoba, Argentina',
@@ -1005,8 +1005,8 @@ ORDER BY delta DESC;`,
     },
     hero: {
       statusPrefix: 'System status: 100% tests passing',
-      titleLead: 'QA Analyst con mentalidad de',
-      titleAccent: 'Systems Analyst',
+      titleLead: 'Software Testing',
+      titleAccent: 'Engineer',
       cv: 'Descargar CV',
       cvEs: 'CV Español',
       cvEn: 'CV Inglés',

@@ -6,8 +6,8 @@
  * suscriben con `onLangChange()` para volver a dibujarse al cambiar de idioma.
  */
 
-import es from './content.es.js?v=cv-labels-2';
-import en from './content.en.js?v=cv-labels-2';
+import es from './content.es.js?v=hero-title-1';
+import en from './content.en.js?v=hero-title-1';
 
 const CONTENT = { es, en };
 const STORAGE_KEY = 'fm-portfolio-lang';

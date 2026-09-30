@@ -2,7 +2,7 @@
  * skills.js — Matriz de habilidades con filtros por área + certificaciones.
  */
 
-import { getContent, ui, onLangChange } from '../data.js?v=cv-labels-2';
+import { getContent, ui, onLangChange } from '../data.js?v=hero-title-1';
 import { $, $$, escapeHtml, observeReveal, stagger } from '../ui.js';
 
 let root = null;
