@@ -5,12 +5,12 @@
  * controla las pestañas del QA Playground e inicializa los módulos.
  */
 
-import { getContent, ui, onLangChange } from './data.js';
+import { getContent, ui, onLangChange } from './data.js?v=language-fix-1';
 import { $, $$, escapeHtml, applyI18n, observeReveal, stagger } from './ui.js';
-import { initTimeline } from './modules/timeline.js';
-import { initSkills } from './modules/skills.js?v=cert-links-4';
-import { initContact } from './modules/contact.js';
-import { initLangToggle } from './modules/lang-toggle.js';
+import { initTimeline } from './modules/timeline.js?v=language-fix-1';
+import { initSkills } from './modules/skills.js?v=language-fix-1';
+import { initContact } from './modules/contact.js?v=language-fix-1';
+import { initLangToggle } from './modules/lang-toggle.js?v=language-fix-1';
 
 /** Las barras de idioma solo se animan la primera vez que entran en pantalla. */
 let langBarsAnimated = false;

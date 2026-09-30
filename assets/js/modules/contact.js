@@ -4,7 +4,7 @@
  * compatible con hosting estático como GitHub Pages.
  */
 
-import { getContent, ui, fmt, onLangChange } from '../data.js';
+import { getContent, ui, fmt, onLangChange } from '../data.js?v=language-fix-1';
 import { $, escapeHtml, toast, copyToClipboard } from '../ui.js';
 
 const ICONS = {

@@ -17,7 +17,7 @@ export const LANGS = [
   { code: 'en', short: 'EN', name: 'English' },
 ];
 
-/** Preferencia guardada → idioma del navegador → español. */
+/** Preferencia guardada → inglés como idioma inicial del portfolio. */
 function detectLang() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -26,8 +26,7 @@ function detectLang() {
     /* localStorage bloqueado (modo privado, file://): seguimos con la detección */
   }
 
-  const browser = (navigator.language || 'es').toLowerCase();
-  return browser.startsWith('es') ? 'es' : 'en';
+  return 'en';
 }
 
 let current = detectLang();
@@ -57,7 +56,13 @@ export function setLang(code) {
     /* Sin persistencia: el cambio igual aplica en esta sesión */
   }
 
-  listeners.forEach((listener) => listener(CONTENT[code], code));
+  listeners.forEach((listener) => {
+    try {
+      listener(CONTENT[code], code);
+    } catch (error) {
+      console.error('Language update failed in one section:', error);
+    }
+  });
 }
 
 export const toggleLang = () => setLang(current === 'es' ? 'en' : 'es');
