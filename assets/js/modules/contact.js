@@ -4,7 +4,7 @@
  * compatible con hosting estático como GitHub Pages.
  */
 
-import { getContent, ui, fmt, onLangChange } from '../data.js?v=cv-labels-1';
+import { getContent, ui, fmt, onLangChange } from '../data.js?v=cv-labels-2';
 import { $, escapeHtml, toast, copyToClipboard } from '../ui.js';
 
 const ICONS = {
