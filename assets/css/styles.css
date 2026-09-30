@@ -341,10 +341,7 @@ code, pre, kbd { font-family: var(--font-mono); }
 
 .hero { padding-top: calc(var(--header-h) + 72px); padding-bottom: 72px; }
 .hero__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 56px;
-  align-items: center;
+  max-width: 900px;
 }
 
 .hero__identity {
@@ -355,9 +352,9 @@ code, pre, kbd { font-family: var(--font-mono); }
 }
 .hero__portrait-wrap {
   position: relative;
-  width: 104px;
-  height: 104px;
-  flex: 0 0 104px;
+  width: 136px;
+  height: 136px;
+  flex: 0 0 136px;
   padding: 3px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--cyan), var(--emerald));
@@ -1352,7 +1349,7 @@ code, pre, kbd { font-family: var(--font-mono); }
 }
 
 /* Contacto */
-.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr); gap: 44px; align-items: start; }
+.contact { max-width: 760px; }
 .contact__list { display: grid; gap: 10px; margin: 26px 0; }
 .contact__item {
   display: flex;
@@ -1545,7 +1542,7 @@ code, pre, kbd { font-family: var(--font-mono); }
 
 @media (max-width: 520px) {
   .hero__identity { gap: 14px; }
-  .hero__portrait-wrap { width: 86px; height: 86px; flex-basis: 86px; }
+  .hero__portrait-wrap { width: 104px; height: 104px; flex-basis: 104px; }
   .status-pill { font-size: 0.7rem; padding-right: 11px; }
   .hero__actions .btn { width: 100%; }
   .lang-toggle { padding: 6px 9px; gap: 5px; }

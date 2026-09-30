@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=cert-links-4" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=clean-layout-1" />
 
   <script type="application/ld+json">
   {
@@ -61,10 +61,6 @@
       </nav>
 
       <div class="site-header__actions">
-        <button class="btn btn--ghost btn--sm cmdk-trigger" id="cmdkTrigger" type="button" aria-haspopup="dialog">
-          <span aria-hidden="true">⌘</span> <span data-i18n="nav.search">Buscar</span> <kbd>K</kbd>
-        </button>
-
         <!-- Selector de idioma -->
         <button class="lang-toggle" id="langToggle" type="button" aria-live="polite">
           <span class="lang-toggle__flag" id="langFlag" aria-hidden="true"></span>
@@ -135,22 +131,6 @@
           <dl class="hero__metrics" id="heroMetrics"><!-- render: main.js --></dl>
         </div>
 
-        <!-- Terminal interactiva -->
-        <div class="hero__terminal">
-          <div class="terminal" id="heroTerminal" role="img" data-i18n-aria="hero.terminalAria" aria-label="Terminal simulada que ejecuta la suite de pruebas del portafolio">
-            <div class="terminal__bar">
-              <span class="terminal__dot terminal__dot--red"></span>
-              <span class="terminal__dot terminal__dot--yellow"></span>
-              <span class="terminal__dot terminal__dot--green"></span>
-              <span class="terminal__title" data-i18n="hero.terminalTitle">fabrizio@qa-lab: ~/portfolio</span>
-            </div>
-            <pre class="terminal__body" id="terminalBody"><code></code></pre>
-            <div class="terminal__footer">
-              <span class="terminal__badge terminal__badge--ok" id="terminalBadge">esperando ejecución…</span>
-              <button class="terminal__replay" id="terminalReplay" type="button" data-i18n="hero.replay">↻ Volver a ejecutar</button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -175,57 +155,11 @@
       </div>
     </section>
 
-    <!-- ══════════════════  QA PLAYGROUND  ══════════════════ -->
-    <section class="section" id="playground" aria-labelledby="playground-title">
-      <div class="container">
-        <header class="section-head">
-          <p class="section-kicker" data-i18n="playground.kicker">02 — Demo interactiva</p>
-          <h2 class="section-title" id="playground-title" data-i18n="playground.title">Interactive QA Playground</h2>
-          <p class="section-lead" data-i18n="playground.lead">
-            En vez de contarte cómo trabajo, te lo muestro. Tres módulos simulados con datos que reproducen
-            el día a día de un proyecto de migración bancaria: ejecutá los requests, abrí los tickets y corré las queries.
-          </p>
-        </header>
-
-        <div class="tabs" data-tabs="playground">
-          <div class="tabs__list" role="tablist" data-i18n-aria="playground.tabsAria" aria-label="Módulos del QA Playground">
-            <button class="tabs__tab is-active" role="tab" id="tab-api" aria-controls="panel-api" aria-selected="true" data-tab="api">
-              <span class="tabs__icon" aria-hidden="true">⚡</span> <span data-i18n="playground.tabs.api.label">API Testing</span>
-              <small data-i18n="playground.tabs.api.sub">Simulador Postman</small>
-            </button>
-            <button class="tabs__tab" role="tab" id="tab-bugs" aria-controls="panel-bugs" aria-selected="false" tabindex="-1" data-tab="bugs">
-              <span class="tabs__icon" aria-hidden="true">🐞</span> <span data-i18n="playground.tabs.bugs.label">Bug Tracker</span>
-              <small data-i18n="playground.tabs.bugs.sub">Mini-board Jira</small>
-            </button>
-            <button class="tabs__tab" role="tab" id="tab-sql" aria-controls="panel-sql" aria-selected="false" tabindex="-1" data-tab="sql">
-              <span class="tabs__icon" aria-hidden="true">🗄️</span> <span data-i18n="playground.tabs.sql.label">Database</span>
-              <small data-i18n="playground.tabs.sql.sub">Validación SQL</small>
-            </button>
-          </div>
-
-          <!-- Panel: API -->
-          <div class="tabs__panel is-active" role="tabpanel" id="panel-api" aria-labelledby="tab-api" data-panel="api">
-            <div class="api-console" id="apiConsole"><!-- render: api-console.js --></div>
-          </div>
-
-          <!-- Panel: Bugs -->
-          <div class="tabs__panel" role="tabpanel" id="panel-bugs" aria-labelledby="tab-bugs" data-panel="bugs" hidden>
-            <div class="bug-board" id="bugBoard"><!-- render: bug-board.js --></div>
-          </div>
-
-          <!-- Panel: SQL -->
-          <div class="tabs__panel" role="tabpanel" id="panel-sql" aria-labelledby="tab-sql" data-panel="sql" hidden>
-            <div class="sql-lab" id="sqlLab"><!-- render: sql-lab.js --></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ══════════════════  EXPERIENCIA  ══════════════════ -->
     <section class="section" id="experiencia" aria-labelledby="exp-title">
       <div class="container">
         <header class="section-head">
-          <p class="section-kicker" data-i18n="timeline.kicker">03 — Trayectoria</p>
+          <p class="section-kicker" data-i18n="timeline.kicker">02 — Trayectoria</p>
           <h2 class="section-title" id="exp-title" data-i18n="timeline.title">Experiencia &amp; casos de estudio</h2>
           <p class="section-lead" data-i18n="timeline.lead">
             Cada posición desplegada como un caso: qué se probó, con qué herramientas y cuál fue el impacto real
@@ -240,7 +174,7 @@
     <section class="section" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <header class="section-head section-head--skills">
-          <p class="section-kicker" data-i18n="skills.kicker">04 — Stack</p>
+          <p class="section-kicker" data-i18n="skills.kicker">03 — Stack</p>
           <h2 class="section-title" id="skills-title" data-i18n="skills.title">Matriz de habilidades &amp; certificaciones</h2>
         </header>
 
@@ -250,16 +184,6 @@
 
         <div class="skills" id="skillsModule"><!-- render: skills.js --></div>
 
-        <div class="soft-grid">
-          <div class="card card--soft">
-            <h3 class="card__title" data-i18n="skills.soft">Habilidades blandas</h3>
-            <ul class="tag-list" id="softSkills"><!-- render: main.js --></ul>
-          </div>
-          <div class="card card--soft">
-            <h3 class="card__title" data-i18n="skills.interests">Intereses</h3>
-            <ul class="tag-list" id="interests"><!-- render: main.js --></ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -267,7 +191,7 @@
     <section class="section" id="contacto" aria-labelledby="contact-title">
       <div class="container contact">
         <div class="contact__intro">
-          <p class="section-kicker" data-i18n="contact.kicker">05 — Contacto</p>
+          <p class="section-kicker" data-i18n="contact.kicker">04 — Contacto</p>
           <h2 class="section-title" id="contact-title" data-i18n="contact.title">¿Hablamos de tu próximo release?</h2>
           <p class="section-lead" data-i18n="contact.lead">
             Estoy abierto a posiciones de QA Functional / QA Analyst en Fintech, Banking y producto digital.
@@ -283,36 +207,6 @@
           </div>
         </div>
 
-        <form class="contact__form card" id="contactForm" novalidate>
-          <h3 class="card__title" data-i18n="contact.formTitle">Enviar un mensaje</h3>
-          <p class="form-hint" data-i18n="contact.formHint">Se abre tu cliente de correo con el mensaje ya redactado.</p>
-
-          <div class="field">
-            <label for="fName"><span data-i18n="contact.name">Nombre</span> <span aria-hidden="true">*</span></label>
-            <input type="text" id="fName" name="name" required autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Tu nombre" aria-describedby="fNameError" />
-            <p class="field__error" id="fNameError" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="fEmail"><span data-i18n="contact.email">Email</span> <span aria-hidden="true">*</span></label>
-            <input type="email" id="fEmail" name="email" required autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="nombre@empresa.com" aria-describedby="fEmailError" />
-            <p class="field__error" id="fEmailError" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="fSubject" data-i18n="contact.subject">Asunto</label>
-            <select id="fSubject" name="subject"><!-- render: contact.js --></select>
-          </div>
-
-          <div class="field">
-            <label for="fMessage"><span data-i18n="contact.message">Mensaje</span> <span aria-hidden="true">*</span></label>
-            <textarea id="fMessage" name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="Contame brevemente sobre el proyecto o la posición…" aria-describedby="fMessageError"></textarea>
-            <p class="field__error" id="fMessageError" role="alert"></p>
-          </div>
-
-          <button class="btn btn--primary btn--block" type="submit" data-i18n="contact.submit">Enviar mensaje</button>
-          <p class="form-note" id="formNote" role="status"></p>
-        </form>
       </div>
     </section>
   </main>
@@ -332,23 +226,9 @@
     </div>
   </footer>
 
-  <!-- Command palette -->
-  <div class="cmdk" id="cmdk" hidden>
-    <div class="cmdk__backdrop" data-cmdk-close></div>
-    <div class="cmdk__dialog" role="dialog" aria-modal="true" data-i18n-aria="cmdk.aria" aria-label="Búsqueda rápida">
-      <input type="text" class="cmdk__input" id="cmdkInput" data-i18n-placeholder="cmdk.placeholder" placeholder="Ir a una sección o acción…" autocomplete="off" data-i18n-aria="cmdk.searchAria" aria-label="Buscar" />
-      <ul class="cmdk__list" id="cmdkList" role="listbox"></ul>
-      <p class="cmdk__hint">
-        <kbd>↑</kbd><kbd>↓</kbd> <span data-i18n="cmdk.hintNav">navegar</span> ·
-        <kbd>Enter</kbd> <span data-i18n="cmdk.hintOpen">abrir</span> ·
-        <kbd>Esc</kbd> <span data-i18n="cmdk.hintClose">cerrar</span>
-      </p>
-    </div>
-  </div>
-
   <!-- Toasts -->
   <div class="toaster" id="toaster" role="status" aria-live="polite" aria-atomic="false"></div>
 
-  <script type="module" src="assets/js/main.js?v=cert-links-4"></script>
+  <script type="module" src="assets/js/main.js?v=clean-layout-2"></script>
 </body>
 </html>

@@ -7,14 +7,9 @@
 
 import { getContent, ui, onLangChange } from './data.js';
 import { $, $$, escapeHtml, applyI18n, observeReveal, stagger } from './ui.js';
-import { initApiConsole } from './modules/api-console.js';
-import { initBugBoard } from './modules/bug-board.js';
-import { initSqlLab } from './modules/sql-lab.js';
 import { initTimeline } from './modules/timeline.js';
 import { initSkills } from './modules/skills.js?v=cert-links-4';
 import { initContact } from './modules/contact.js';
-import { initTerminal } from './modules/terminal.js';
-import { initCmdk } from './modules/cmdk.js';
 import { initLangToggle } from './modules/lang-toggle.js';
 
 /** Las barras de idioma solo se animan la primera vez que entran en pantalla. */
@@ -57,13 +52,11 @@ function renderProfile() {
     )
     .join('');
 
-  $('#softSkills').innerHTML = profile.softSkills.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-  $('#interests').innerHTML = profile.interests.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-
   $('#linkedinBtn').href = profile.linkedin;
   $('#cvDownloadEs').href = profile.cvEs;
   $('#cvDownloadEn').href = profile.cvEn;
   $('#cvDownloadEs').hidden = getContent().code === 'en';
+  $('#cvDownloadEn').hidden = getContent().code === 'es';
   $('#footerYear').textContent = `© ${new Date().getFullYear()} Fabrizio Milanesio`;
 
   $('#statusPillText').textContent = profile.available
@@ -232,14 +225,9 @@ function init() {
   initScrollSpy();
   initTabs();
 
-  initTerminal();
-  initApiConsole();
-  initBugBoard();
-  initSqlLab();
   initTimeline();
   initSkills();
   initContact();
-  initCmdk();
 
   animateLanguageBars();
 

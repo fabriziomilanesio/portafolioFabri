@@ -44,7 +44,6 @@ export default {
       'SQL · DBeaver',
       'AWS CloudWatch · Splunk',
       'ISTQB Foundation',
-      'Game Testing',
     ],
     softSkills: [
       'Pensamiento analítico y resolución de problemas',
@@ -65,7 +64,6 @@ export default {
 
   navItems: [
     { id: 'inicio', label: 'Inicio' },
-    { id: 'playground', label: 'QA Playground' },
     { id: 'experiencia', label: 'Experiencia' },
     { id: 'skills', label: 'Skills' },
     { id: 'contacto', label: 'Contacto' },
@@ -1136,7 +1134,7 @@ ORDER BY delta DESC;`,
       toastFail: 'Diferencias detectadas en base de datos',
     },
     timeline: {
-      kicker: '03 — Trayectoria',
+      kicker: '02 — Trayectoria',
       title: 'Experiencia & casos de estudio',
       lead: 'Cada posición desplegada como un caso: qué se probó, con qué herramientas y cuál fue el impacto real del aseguramiento de calidad.',
       what: 'Qué testeé',
@@ -1146,7 +1144,7 @@ ORDER BY delta DESC;`,
       current: 'Actual',
     },
     skills: {
-      kicker: '04 — Stack',
+      kicker: '03 — Stack',
       title: 'Matriz de habilidades & certificaciones',
       lead: 'Filtrá por área para ver el detalle de cada herramienta y cómo la aplico.',
       filtersAria: 'Filtrar habilidades por área',
@@ -1154,7 +1152,7 @@ ORDER BY delta DESC;`,
       interests: 'Intereses',
     },
     contact: {
-      kicker: '05 — Contacto',
+      kicker: '04 — Contacto',
       title: '¿Hablamos de tu próximo release?',
       lead: 'Estoy abierto a posiciones de QA Functional / QA Analyst en Fintech, Banking y producto digital. Respondo en el día.',
       labels: { email: 'Email', phone: 'Teléfono', linkedin: 'LinkedIn', location: 'Ubicación' },

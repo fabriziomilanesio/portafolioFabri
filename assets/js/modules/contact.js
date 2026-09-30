@@ -198,6 +198,7 @@ export function initContact() {
     renderContactList();
     renderSubjects();
     renderWhatsapp();
-    $('#formNote').textContent = '';
+    const formNote = $('#formNote');
+    if (formNote) formNote.textContent = '';
   });
 }
