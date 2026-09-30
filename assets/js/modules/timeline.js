@@ -4,7 +4,7 @@
  * herramientas e impacto medible del aseguramiento de calidad.
  */
 
-import { getContent, ui, onLangChange } from '../data.js?v=brand-role-1';
+import { getContent, ui, onLangChange } from '../data.js?v=cv-labels-1';
 import { $, $$, escapeHtml, observeReveal, stagger } from '../ui.js';
 
 let root = null;
